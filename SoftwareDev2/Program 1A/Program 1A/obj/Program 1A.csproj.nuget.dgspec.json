@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 0\\Program 0\\Program 0.csproj": {}
+    "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 1A\\Program 1A\\Program 1A.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 0\\Program 0\\Program 0.csproj": {
+    "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 1A\\Program 1A\\Program 1A.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 0\\Program 0\\Program 0.csproj",
-        "projectName": "Program 0",
-        "projectPath": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 0\\Program 0\\Program 0.csproj",
+        "projectUniqueName": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 1A\\Program 1A\\Program 1A.csproj",
+        "projectName": "Program 1A",
+        "projectPath": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 1A\\Program 1A\\Program 1A.csproj",
         "packagesPath": "C:\\Users\\brend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 0\\Program 0\\obj\\",
+        "outputPath": "C:\\Users\\brend\\Documents\\School\\School-Projects\\School-Projects\\SoftwareDev2\\Program 1A\\Program 1A\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brend\\AppData\\Roaming\\NuGet\\NuGet.Config",
