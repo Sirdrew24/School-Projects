@@ -35,8 +35,8 @@ namespace Program_1A
             return (TotalDimension >= LARGE_THRESHOLD);
         }
 
-        // Precondition:  
-        // Postcondition: 
+        // Precondition:  None
+        // Postcondition: A string with air package's data has been returned
         public override string ToString()
         {
             string NL = Environment.NewLine;
