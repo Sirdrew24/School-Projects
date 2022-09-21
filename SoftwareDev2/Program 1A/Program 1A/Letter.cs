@@ -33,11 +33,15 @@ namespace Program_1A
             }
         }
 
+        // Precondition:  None
+        // Postcondition: The letter's cost is returned
         public override decimal CalcCost()
         {
             return FixedCost;
         }
 
+        // Precondition:  None
+        // Postcondition: A string with the letter's data has been returned
         public override string ToString()
         {
             string NL = Environment.NewLine;

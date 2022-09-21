@@ -56,6 +56,8 @@ namespace Program_1A
 
         public abstract decimal CalcCost(); // Declares the CalcCost method to be overridden in classes that inherit this class
 
+        // Precondition:  None
+        // Postcondition: A string with the parcel's data has been returned
         public override string ToString()
         {
             string NL = Environment.NewLine;

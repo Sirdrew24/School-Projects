@@ -134,6 +134,8 @@ namespace Program_1A
             }
         }
 
+        // Precondition:  None
+        // Postcondition: A string with the Address's data has been returned
         public override string ToString()
         {
             string NL = Environment.NewLine;

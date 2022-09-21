@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace Program_1A
 {
-    abstract class AirPackage : Package
+    public abstract class AirPackage : Package
     {
         public const double HEAVY_THRESHOLD = 75; // Min weight of a heavy package
         public const double LARGE_THRESHOLD = 100; // Min dimensions of a large package
 
-        // Precondition:  pLength > 0, pWidth > 0, pHeight > 0, pWeight > 0
-        // Postcondition: The air package is created with the specified values for origin address, destination address,
-        //                length. width, height, and weight
         public AirPackage(Address originAddress, Address destinationAddress, double pLength, double pWidth, double pHeight, double pWeight)
             : base(originAddress, destinationAddress, pLength, pWidth, pHeight, pWeight)
         {

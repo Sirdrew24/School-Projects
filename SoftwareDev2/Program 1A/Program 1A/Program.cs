@@ -29,15 +29,25 @@ namespace Program_1A
             Letter l2 = new(a2, a4, 1.20M); // Test Letter 2
             Letter l3 = new(a4, a1, 1.70M); // Test Letter 3
 
-            List<Parcel> parcels = new List<Parcel> { l1, l2, l3 }; // Test list of parcels
+            GroundPackage gp1 = new(a3, a4, 14, 10, 5, 12.5);
+            NextDayAirPackage ndap1 = new(a1, a3, 25, 15, 15, 85, 7.50M);
+            TwoDayAirPackage tdap1 = new(a4, a1, 46.5, 39.5, 28.0, 80.5, TwoDayAirPackage.Delivery.Saver);
+
+            List<Parcel> parcels = new(); // Test list of parcels
+
+            parcels.Add(l1);
+            parcels.Add(gp1);
+            parcels.Add(ndap1);
+            parcels.Add(tdap1);
 
             //Disaply data
-            WriteLine("Program 0 - List of Parcels\n");
+            WriteLine("Original List:");
+            WriteLine("====================");
 
             foreach (Parcel p in parcels)
             {
                 WriteLine(p);
-                WriteLine("--------------------");
+                WriteLine("====================");
             }
         }
     }

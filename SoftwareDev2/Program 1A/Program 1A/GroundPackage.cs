@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Program_1A
 {
-    internal class GroundPackage : Package
+    public class GroundPackage : Package
     {
         public GroundPackage(Address originAddress, Address destinationAddress, double pLength, double pWidth, double pHeight, double pWeight)
             : base(originAddress, destinationAddress, pLength, pWidth, pHeight, pWeight)
