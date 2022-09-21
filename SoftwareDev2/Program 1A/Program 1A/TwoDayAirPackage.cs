@@ -46,16 +46,16 @@ namespace Program_1A
 
             decimal cost;
 
-            cost = (decimal)(DIM_FACTOR + TotalDimension + WEIGHT_FACTOR * Weight);
+            cost = (decimal)(DIM_FACTOR * TotalDimension + WEIGHT_FACTOR * Weight);
 
             if (DeliveryType == Delivery.Saver)
-                cost += (1 - DISCOUNT_FACTOR);
+                cost *= (1 - DISCOUNT_FACTOR);
 
             return cost;
         }
 
         // Precondition:  None
-        // Postcondition: 
+        // Postcondition: A string with the two day air package's data is returned
         public override string ToString()
         {
             string NL = Environment.NewLine;

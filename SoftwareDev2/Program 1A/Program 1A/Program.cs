@@ -25,13 +25,10 @@ namespace Program_1A
             Address a3 = new("James Kirk", "654 Roddenberry Way", "Suite 321", "El Paso", "TX", 79901); // Test Address 3
             Address a4 = new("John Crichton", "678 Pau Place", "Apt. 7", "Portland", "ME", 04101); // Test Address 4
 
-            Letter l1 = new(a1, a3, 0.50M); // Test Letter 1
-            Letter l2 = new(a2, a4, 1.20M); // Test Letter 2
-            Letter l3 = new(a4, a1, 1.70M); // Test Letter 3
-
-            GroundPackage gp1 = new(a3, a4, 14, 10, 5, 12.5);
-            NextDayAirPackage ndap1 = new(a1, a3, 25, 15, 15, 85, 7.50M);
-            TwoDayAirPackage tdap1 = new(a4, a1, 46.5, 39.5, 28.0, 80.5, TwoDayAirPackage.Delivery.Saver);
+            Letter l1 = new(a1, a2, 3.95M); // Test letter 
+            GroundPackage gp1 = new(a3, a4, 14, 10, 5, 12.5); // Test ground package
+            NextDayAirPackage ndap1 = new(a1, a3, 25, 15, 15, 85, 7.50M); // Test next day air package
+            TwoDayAirPackage tdap1 = new(a4, a1, 46.5, 39.5, 28.0, 80.5, TwoDayAirPackage.Delivery.Saver); // Test two day air package
 
             List<Parcel> parcels = new(); // Test list of parcels
 

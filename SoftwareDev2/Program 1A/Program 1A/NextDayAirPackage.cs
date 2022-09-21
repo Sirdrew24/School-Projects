@@ -45,13 +45,13 @@ namespace Program_1A
 
             decimal cost;
 
-            cost = (decimal)(DIM_FACTOR * TotalDimension + WEIGHT_FACTOR + Weight) + ExpressFee;
+            cost = (decimal)(DIM_FACTOR * TotalDimension + WEIGHT_FACTOR * Weight) + ExpressFee;
 
             if (IsHeavy())
                 cost += (decimal)(HEAVY_FACTOR * Weight);
 
             if (IsLarge())
-                cost += (decimal)(LARGE_FACTOR + TotalDimension);
+                cost += (decimal)(LARGE_FACTOR * TotalDimension);
 
             return cost;
         }
