@@ -1,5 +1,5 @@
 ﻿/* Brendon Carter
- * Program 1A
+ * Program 1B
  * CIS 200-75
  * Due: 9/7/2022
  * 
@@ -12,7 +12,7 @@ using System.Diagnostics.Metrics;
 using System.Net;
 using static System.Console;
 
-namespace Program_1A
+namespace Program_1B
 {
     class Program
     {
