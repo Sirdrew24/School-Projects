@@ -1,0 +1,11 @@
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\bin\Debug\CIS200E2P3.exe.config
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\bin\Debug\CIS200E2P3.exe
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\bin\Debug\CIS200E2P3.pdb
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.csproj.AssemblyReference.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.csproj.SuggestedBindingRedirects.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.Form1.resources
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.Properties.Resources.resources
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.csproj.GenerateResource.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.csproj.CoreCompileInputs.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.exe
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev2\CIS200E2P3\CIS200E2P3\obj\Debug\CIS200E2P3.pdb
