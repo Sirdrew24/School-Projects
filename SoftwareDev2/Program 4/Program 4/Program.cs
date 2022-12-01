@@ -1,11 +1,7 @@
 ﻿/* Brendon Carter
- * Program 1B
+ * Program 4
  * CIS 200-75
  * Due: 10/12/2022
- * 
- * Description: This program Uses the classes that were created in program 0 and program 1A to add a linq query to them. The object of this program is to 
- *              build off of program 0 and program 1A by using linq to query through parcels that are created. Override methods such as the
- *              ToString method and a CalcCost method are used in this program as well.
  */
 using System.Diagnostics.Metrics;
 using System.Collections.Generic;
@@ -35,7 +31,7 @@ namespace Program_4
             Address a5 = new("Bob Burgers", "1234 Place", "Boston", "MA", 12345);                           // Test Address 5
             Address a6 = new("Brendon", "123 down St.", "Apt. 24", "Louisville", "KY", 97654);              // Test Address 6
             Address a7 = new("Karen", "Green Ave.", "Boston", "MA", 59467);                                 // Test Address 7
-            Address a8 = new("Bob Kirk", "Great Place","Apt. 5", "Indianapolis", "IN", 12345);              // Test Address 8
+            Address a8 = new("Bob Kirk", "Great Place", "Apt. 5", "Indianapolis", "IN", 12345);              // Test Address 8
 
 
             Letter l1 = new(a1, a2, 3.95M);                                                                 // Test letter 1
@@ -60,10 +56,11 @@ namespace Program_4
             parcels.Add(tdap2);
             parcels.Add(tdap3);
 
-            //Disaply data
+            // Disaply data
+
+            // Original list
             WriteLine("Original List:");
             WriteLine("====================");
-
             foreach (Parcel p in parcels)
             {
                 WriteLine(p);
@@ -71,92 +68,45 @@ namespace Program_4
             }
             Pause();
 
-            // Parcels by Destination Zip (desc)
-            var parcelsByDestZip =
-                from p in parcels
-                orderby p.DestinationAddress.Zip descending
-                select p;
-
-            WriteLine("Parcels by Destination Zip (desc):");
-            WriteLine("====================");
-
-            foreach (Parcel p in parcelsByDestZip)
-            {
-                if (VERBOSE)
-                {
-                    WriteLine(p);
-                    WriteLine("====================");
-                }
-                else
-                    WriteLine($"{p.DestinationAddress.Zip:D5}");
-            }
-            Pause();
-
             // Parcels by cost
-            var parcelsByCost =
-                from p in parcels
-                orderby p.CalcCost()
-                select p;
-
-            WriteLine("Parcels by Cost:");
+            parcels.Sort();
+            WriteLine("Sorted in Natural Order (Ascending by Cost):");
             WriteLine("====================");
-
-            foreach (Parcel p in parcelsByCost)
+            foreach (Parcel p in parcels)
             {
                 if (VERBOSE)
-                {
                     WriteLine(p);
-                    WriteLine("====================");
-                }
                 else
                     WriteLine($"{p.CalcCost(),8:C}");
             }
             Pause();
 
-            // Parcels by type and cost (desc)
-            var parcelsByTypeCost =
-                from p in parcels
-                orderby p.GetType().ToString(), p.CalcCost() descending
-                select p;
-
-            WriteLine("Parcels by Type and Cost (desc):");
+            // Parcels by destination zip (Desc)
+            parcels.Sort(new DescendingByDestZipComparer());
+            WriteLine("Sorted using first Comparer (Descending by Destination Zip):");
             WriteLine("====================");
-
-            foreach (Parcel p in parcelsByTypeCost)
+            foreach (Parcel p in parcels)
             {
                 if (VERBOSE)
-                {
                     WriteLine(p);
-                    WriteLine("====================");
-                }
                 else
-                    WriteLine($"{p.GetType().ToString(), -17} {p.CalcCost(), 8:C}");
+                    WriteLine($"{p.DestinationAddress.Zip:D5}");
             }
             Pause();
 
-            // Heavy AirPackages by Weight (desc)
-            var heavyAirPackagesByWeight =
-                from p in parcels
-                let ap = p as AirPackage // Downcast if AirPackage, null otherwise
-                where (ap != null) && ap.IsHeavy() // Safe becuase of short-circuit
-                orderby ap.Weight descending
-                select ap;
-
-            WriteLine("Heavy AirPackages by Weight (desc):");
+            // Parcels by type and cost (desc)
+            parcels.Sort(new TypeAndCostComparer());
+            WriteLine("Sorted using EC Comparer (Ascending By Typee Then Descending by Cost):");
             WriteLine("====================");
-
-            foreach (AirPackage ap in heavyAirPackagesByWeight)
+            foreach (Parcel p in parcels)
             {
                 if (VERBOSE)
-                {
-                    WriteLine(ap);
-                    WriteLine("====================");
-                }
+                    WriteLine(p);
                 else
-                    WriteLine("{0,-17} {1,4:F1}", ap.GetType().ToString(), ap.Weight);
+                    WriteLine($"{p.GetType().ToString(),-17} {p.CalcCost(),8:C}");
             }
+            Pause();
         }
-
         // Precondition:  None
         // Postcondition: Pauses program execution until the user presses Enter and then clears the screen
         public static void Pause()

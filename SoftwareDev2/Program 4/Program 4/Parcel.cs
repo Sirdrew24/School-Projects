@@ -8,7 +8,7 @@ using System.Net;
 
 namespace Program_4
 {
-    public abstract class Parcel
+    public abstract class Parcel : IComparable<Parcel>
     {
         private Address _originAddress;
         private Address _destinationAddress;
@@ -56,6 +56,20 @@ namespace Program_4
         }
 
         public abstract decimal CalcCost(); // Declares the CalcCost method to be overridden in classes that inherit this class
+
+        public int CompareTo(Parcel p2)
+        {
+            decimal cost1;
+            decimal cost2;
+
+            if (p2 == null)
+                return 1;
+
+            cost1 = this.CalcCost();
+            cost2 = p2.CalcCost();
+
+            return cost2.CompareTo(cost2);
+        }
 
         // Precondition:  None
         // Postcondition: A string with the parcel's data has been returned
