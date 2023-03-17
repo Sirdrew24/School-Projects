@@ -5,3 +5,11 @@ C:\Users\brend\Documents\School\CIS 199\Program 4\Program 4\obj\Debug\Program 4.
 C:\Users\brend\Documents\School\CIS 199\Program 4\Program 4\obj\Debug\Program 4.csproj.CoreCompileInputs.cache
 C:\Users\brend\Documents\School\CIS 199\Program 4\Program 4\obj\Debug\Program 4.exe
 C:\Users\brend\Documents\School\CIS 199\Program 4\Program 4\obj\Debug\Program 4.pdb
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\bin\Debug\Program 4.exe.config
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\bin\Debug\Program 4.exe
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\bin\Debug\Program 4.pdb
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\obj\Debug\Program 4.csproj.AssemblyReference.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\obj\Debug\Program 4.csproj.SuggestedBindingRedirects.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\obj\Debug\Program 4.csproj.CoreCompileInputs.cache
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\obj\Debug\Program 4.exe
+C:\Users\brend\Documents\School\School-Projects\School-Projects\SoftwareDev1\Program 4\Program 4\obj\Debug\Program 4.pdb
