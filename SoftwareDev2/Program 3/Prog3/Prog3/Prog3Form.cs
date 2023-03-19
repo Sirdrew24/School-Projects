@@ -15,6 +15,7 @@ using System.Linq.Expressions;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -322,5 +323,17 @@ namespace Prog3
             else
                 MessageBox.Show("No addresses to edit!", "No Addresses");
         }
-    }
+
+		private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+            InitializeComponent();
+		}
+
+		private void spanishToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
+            InitializeComponent();
+		}
+	}
 }

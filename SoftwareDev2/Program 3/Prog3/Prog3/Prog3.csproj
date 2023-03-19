@@ -91,6 +91,9 @@
     <EmbeddedResource Include="LetterForm.resx">
       <DependentUpon>LetterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prog3Form.es-MX.resx">
+      <DependentUpon>Prog3Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prog3Form.resx">
       <DependentUpon>Prog3Form.cs</DependentUpon>
     </EmbeddedResource>
