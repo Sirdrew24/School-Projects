@@ -1,0 +1,41 @@
+﻿@model PigGameModel
+@{
+    ViewData["Title"] = "Pig Game";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Player 1 score: @Model.Player1Score</p>
+<p>Player 2 score: @Model.Player2Score</p>
+
+@if (ViewBag.Winner != null)
+{
+    <h2>@ViewBag.Winner wins!</h2>
+}
+
+<p>Current turn total: @Model.TurnTotal</p>
+<p>Die value: @Model.DieValue</p>
+
+<form asp-controller="Home" asp-action="Roll" method="post">
+    <button type="submit" id="rollButton">Roll</button>
+</form>
+
+<form asp-controller="Home" asp-action="Hold" method="post">
+    <button type="submit" id="holdButton">Hold</button>
+</form>
+
+<form asp-controller="Home" asp-action="Index" method="get">
+    <button type="submit">New Game</button>
+</form>
+
+@if (ViewBag.DisableRollAndHold != null)
+{
+    <script>
+        document.querySelectorAll("button[type=submit]").forEach(function (btn) {
+            if (btn.innerText === "Roll" || btn.innerText === "Hold") {
+                btn.disabled = true;
+            }
+        });
+    </script>
+}
+

@@ -1,0 +1,88 @@
+﻿@model GameModel
+
+<h2>@Model.WhoseTurn's Turn</h2>
+
+<div class="grid">
+    @for (int i = 0; i < 9; i++)
+    {
+            <button id="@i" class="cell @Model.Board[i]" disabled="@(!Model.Board[i].Equals(' '))">@Model.Board[i]</button>
+        if ((i + 1) % 3 == 0)
+        {
+                    <br />
+        }
+    }
+</div>
+
+@if (Model.GameOver)
+{
+    if (Model.Winner == ' ')
+    {
+                <h2>Tie Game!</h2>
+    }
+    else
+    {
+                <h2>@Model.Winner Wins!</h2>
+    }
+        <a href="@Url.Action("NewGame")">New Game</a>
+}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // add event listener to each button
+        var buttons = document.querySelectorAll(".cell");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function () {
+                var buttonId = this.getAttribute("id");
+
+                // make AJAX POST request
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "@Url.Action("Index")");
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        var gameModel = JSON.parse(xhr.responseText);
+                        var whoseTurn = gameModel.whoseTurn;
+                        var board = gameModel.board;
+
+                        // update the game board
+                        for (var i = 0; i < board.length; i++) {
+                            var cell = document.getElementById(i);
+                            cell.textContent = board[i];
+                            cell.disabled = board[i] !== " ";
+                            cell.classList.remove("X", "O");
+                            if (board[i] !== " ") {
+                                cell.classList.add(board[i]);
+                            }
+                        }
+
+                        // update whose turn it is
+                        document.querySelector("h2").textContent = whoseTurn + "'s Turn";
+                    } else {
+                        alert("An error occurred.");
+                    }
+                };
+                xhr.onerror = function () {
+                    alert("An error occurred.");
+                };
+                xhr.send("buttonIndex=" + encodeURIComponent(buttonId));
+            });
+        }
+    });
+</script>
+
+<style>
+    .cell {
+        font-size: 36px;
+        width: 100px;
+        height: 100px;
+    }
+    .X {
+        color: red;
+        background-color: yellow;
+    }
+
+    .O {
+        color: blue;
+        background-color: green;
+    }
+</style>

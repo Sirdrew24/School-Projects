@@ -29,11 +29,13 @@ namespace Prog3
         // Postcondition: The form's GUI is prepared for display. A few test addresses are added to the list of address
         public Prog3Form()
         {
-            InitializeComponent();
+			InitializeComponent();
 
-            upv = new UserParcelView();
+            panel1.BackColor = Color.Red;
 
-            /*// Test Data
+			upv = new UserParcelView();
+
+			/*// Test Data
             upv.AddAddress("John Smith", "123 Any St.", "Apt. 45", "Louisville", "KY", 40202); // Test Address 1
             upv.AddAddress("Jane Doe", "987 Main St.", "Beverly Hills", "CA", 90210); // Test Address 2
             upv.AddAddress("James Kirk", "654 Roddenberry Way", "Suite 321", "El Paso", "TX", 79901); // Test Address 3
@@ -53,11 +55,11 @@ namespace Prog3
             upv.AddTwoDayAirPackage(upv.AddressAt(4), upv.AddressAt(6), 46.5, 39.5, 28.0, 80.5, TwoDayAirPackage.Delivery.Saver);
             upv.AddTwoDayAirPackage(upv.AddressAt(7), upv.AddressAt(0), 15, 9.5, 6.5, 75.5, TwoDayAirPackage.Delivery.Early);
             upv.AddTwoDayAirPackage(upv.AddressAt(5), upv.AddressAt(3), 12.0, 12.0, 6.0, 5.5, TwoDayAirPackage.Delivery.Saver);*/
-        }
-        
-        // Precondition:  File, About menu item activated
-        // Postcondition: Information about author displayed in dialog box
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		}
+
+		// Precondition:  File, About menu item activated
+		// Postcondition: Information about author displayed in dialog box
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Program 3\nBy: Brendon Carter\nCIS 200\nFall 2022", "About Program 3");
         }
@@ -334,6 +336,17 @@ namespace Prog3
 		{
 			Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
             InitializeComponent();
+		}
+
+		private void pictureBox1_Paint(object sender, PaintEventArgs e)
+		{
+			int circleSize = 10;
+			int circleSpacing = 10;
+			int x = 10;
+			int y = 10;
+
+			Brush brushRed = new SolidBrush(Color.Red);
+			e.Graphics.FillEllipse(brushRed, x, y, circleSize, circleSize);
 		}
 	}
 }

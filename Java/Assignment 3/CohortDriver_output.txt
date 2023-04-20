@@ -1,0 +1,51 @@
+Printing entire cohort:
+John Smith
+Home Address:
+21 Jump Street
+Lynchburg, VA  24551
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
+
+Marsha Jones
+Home Address:
+123 Main Street
+Euclid, OH  44132
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
+
+Ted Burman
+Home Address:
+123 Broadway Ave.
+Louisville, KY  40202
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
+
+Anne Burman
+Home Address:
+123 Broadway Ave.
+Louisville, KY  40202
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
+
+
+Testing getStudent method for student "Marsha Jones":
+Marsha Jones
+Home Address:
+123 Main Street
+Euclid, OH  44132
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
+
+Testing getStudentEarliestName method:
+Anne Burman
+Home Address:
+123 Broadway Ave.
+Louisville, KY  40202
+School Address:
+800 Lancaster Ave.
+Villanova, PA  19085
